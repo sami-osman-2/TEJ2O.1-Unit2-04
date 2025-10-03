@@ -1,8 +1,23 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Sami Osman
+ * Created on: Sep 2025
+ * This program shows the temperature when button A is pressed.
 */
 
-basic.showString('Hello, World!')
+// variable for temperature
+let Temperature: number
+
+// shows a happy face
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+basic.pause(1000)
+
+// when button A is pressed the temperature is shown
+input.onButtonPressed(Button.A, function () {
+    basic.clearScreen()
+    basic.showString('The temperature is' + input.temperature())
+    basic.clearScreen()
+    basic.showIcon(IconNames.Happy)
+    basic.pause(1000)
+})
